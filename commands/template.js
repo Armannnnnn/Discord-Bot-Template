@@ -48,7 +48,7 @@ module.exports = {
         const num = interaction.options.getNumber("number");
         const role = interaction.options.getRole("role");
         const attachment = interaction.options.getAttachment("attachment"); // some attachment properties are attachment.name, attachment.url, and attachment.proxyURL
-        client.users.send(user.id, { content: `This is a DM to ${user}` }); // example DM
+        await client.users.send(user.id, { content: `This is a DM to ${user}` }); // example DM
         await interaction.reply({ content: `Hello world` });
     }
 }
