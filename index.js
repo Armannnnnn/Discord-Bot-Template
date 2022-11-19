@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
-module.exports = client;
+module.exports = client; // export client to use in other files
 
 
 
@@ -15,6 +15,7 @@ const commands = [];
 
 client.commands = new Collection();
 
+// command handler
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     commands.push(command.data.toJSON());
