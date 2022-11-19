@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
-module.exports = client; // export client to use in other files
+module.exports = client; // export client for use in other files
 
 
 
